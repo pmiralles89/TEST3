@@ -12,3 +12,33 @@ Just enter your bill amount, and it'll tell you:
 - The tip amount
 - Your total (bill + tip)
 ## Try It Out
+## Calculate the Tip
+
+To determine the tip based on the bill amount:
+```javascript
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;```
+
+## Output Details
+
+Displaying the calculation results:
+```javascript
+console.log(`The bill was $${bill}, the tip was $${tip}, and the total value $${bill + tip}`);```
+
+## calcTip Function
+
+Function to calculate the tip:
+```javascript
+function calcTip(bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;```
+}
+
+// Testing the function
+const testTip = calcTip(100);
+
+## Working with Arrays
+
+Using arrays for bills, tips, and totals:
+```javascript
+const bills = [125, 555, 44];
+const tips = bills.map(bill => calcTip(bill));
+const totals = bills.map((bill, index) => bill + tips[index]);```
